@@ -1,5 +1,6 @@
 #dashbord {
-    height: 80px;
+    height: 60px;
+    background-color: #07BEB8;
 
     &.flex-center {
         align-items: center;
@@ -16,7 +17,7 @@
             top: 18px;
 
             &.links>a {
-                color: #636b6f;
+                color: #ffffff;
                 padding: 0 25px;
                 font-size: 13px;
                 font-weight: 600;

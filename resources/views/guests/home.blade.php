@@ -6,7 +6,13 @@
         <title>{{ config('app.name', 'Laravel') }}</title>
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
         <link href="{{ asset('css/front.css') }}" rel="stylesheet">
-
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+</style>
     </head>
     <body>
         <div id="dashbord" class="flex-center position-ref">

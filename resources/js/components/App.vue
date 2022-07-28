@@ -1,37 +1,38 @@
 <template>
-<main>
-    <section class="container">
-        <h1 class="text-center">Boolpress</h1>
-        <div class="row g-3 mt-4">
-            <div class="col-sm-6 col-md-4" v-for="post in posts" :key="post.id">
-                <div class="card h-100">
-                    <img :src="post.image" class="card-img-top" :alt="post.title">
-                    <div class="card-body d-flex flex-column  pt-4">
+    <main>
+        <section class="container">
+            <h1 class="text-center">BOOLPRESS</h1>
+            <div class="row g-3 mt-4">
+                <div class="col-sm-6 col-md-4 p-4" v-for="post in posts" :key="post.id">
+                    <div class="card h-100">
+                        <img :src="post.image" class="card-img-top" :alt="post.title">
+                        <div class="card-body d-flex flex-column  pt-4">
 
-                        <h5 class="card-title">{{ post.title }}</h5>
-                        <p class="card-text mb-auto">{{ post.excerpt }}</p>
-                        <a :href="baseUrl + '/posts/' + post.slug" class="btn btn-primary  mt-4">Vedi di più</a>
+                            <h5 class="card-title">{{ post.title }}</h5>
+                            <p class="card-text mb-auto">{{ post.excerpt }}</p>
+                            <a :href="baseUrl + '/posts/' + post.slug" class="btn btn-primary  mt-4"><strong>VEDI
+                                    POST</strong></a>
+                        </div>
                     </div>
                 </div>
+                <nav aria-label="...">
+                    <ul class="pagination">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item active" aria-current="page">
+                            <a class="page-link" href="#">2</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Next</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
-            <nav aria-label="...">
-                <ul class="pagination">
-                    <li class="page-item disabled">
-                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-                    </li>
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item active" aria-current="page">
-                        <a class="page-link" href="#">2</a>
-                    </li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item">
-                        <a class="page-link" href="#">Next</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </section>
-</main>
+        </section>
+    </main>
 </template>
 
 <script>
@@ -39,7 +40,7 @@ import Axios from 'axios'
 
 export default {
     name: 'App',
-    components:{
+    components: {
 
     },
     data() {
@@ -63,5 +64,29 @@ export default {
 <style lang="scss" scoped>
 @import 'bootstrap/scss/bootstrap';
 
+main {
+    background-color: #C4FFF9;
+    min-height: 100vh;
 
+    .container {
+        .text-center {
+            color: #3DCCC7;
+            padding-top: 30px;
+            font-weight: bolder;
+        }
+
+        .card {
+            padding: 20px;
+
+            .btn {
+                background-color: #3DCCC7;
+                border: none;
+                width: 50%;
+                align-self: center;
+            }
+        }
+
+    }
+
+}
 </style>
