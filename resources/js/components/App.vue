@@ -8,14 +8,14 @@
                         <img :src="post.image" class="card-img-top" :alt="post.title">
                         <div class="card-body d-flex flex-column  pt-4">
 
-                            <h5 class="card-title">{{ post.title }}</h5>
+                            <h5 class="card-title text-uppercase">{{ post.title }}</h5>
                             <p class="card-text mb-auto">{{ post.excerpt }}</p>
                             <a :href="baseUrl + '/posts/' + post.slug" class="btn btn-primary  mt-4"><strong>VEDI
                                     POST</strong></a>
                         </div>
                     </div>
                 </div>
-                <nav aria-label="...">
+                <nav id="pagination" aria-label="...">
                     <ul class="pagination">
                         <li class="page-item disabled">
                             <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
@@ -86,6 +86,14 @@ main {
             }
         }
 
+        #pagination {
+            margin: 0 auto;
+
+            .active{
+                --bs-pagination-active-bg: #3DCCC7;
+                --bs-pagination-active-border-color: #3DCCC7;
+            }
+        }
     }
 
 }
